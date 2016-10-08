@@ -7,13 +7,11 @@ const server = app.listen(8080, () => {
 io = require('socket.io')(server)
 
 
-
-
 //serve all content
 app.use('/', express.static('public'))
 //send controlls to screen
-app.get('/controlls', (req, res) => {
-  res.sendFile(__dirname + '/public/controlls.html')
+app.get('/game', (req, res) => {
+  res.sendFile(__dirname + '/public/game.html')
 })
 
 
